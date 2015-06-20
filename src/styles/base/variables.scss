@@ -7,9 +7,9 @@ $font-size-xs: $font-size * 0.8;
 
 $spacing: 1em;
 
-$content-width: 80%;
 
 $wrapper-width: 70%;
+$content-width: 35em;
 
 @mixin break-point($small) {
   @media screen and (max-width: 900px) {

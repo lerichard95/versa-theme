@@ -89,9 +89,11 @@
         <!-- Favicon and RSS -->
         <link rel="shortcut icon" href="{Favicon}">
         <link rel="alternate" type="application/rss+xml" href="{RSS}">
+
         <!-- build:process optional -->
         <link rel="stylesheet" href="<%= static_css_url %>">
         <!-- /build -->
+
         <!-- build:style inline theme-->
         <link rel="stylesheet" href="styles/theme.css">
         <!-- /build -->
@@ -106,7 +108,8 @@
             <span id="header-tint"></span>
             {/block:IfHeaderTint}
 
-            <div class="flex-item blog-header">
+            <div class="blog-header">
+
                 {block:ShowAvatar}
                 <div class="avatar-wrapper" id="avatar-shape-{AvatarShape}">
                     <a href="/">
@@ -148,7 +151,7 @@
 
             </div>
 
-            <div class="flex-item blog-about">
+            <div class="blog-about">
                 {block:Description}
                 <p>{Description}</p>
                 {/block:Description}
@@ -158,22 +161,20 @@
                 {/block:SubmissionsEnabled}
 
             </div>
-            
             </div>
-
-
-
-            
         </header>
 
-        <div id="wrapper">
-            <!------------
-            POSTS
-            -------------->
+        <div id="main-flex">
+            
             <div id="sidebar">
                 <!-- build:section sidebar_widgets -->
                 <!-- /build -->
             </div>
+
+            <!------------
+            POSTS
+            -------------->
+
             <div id="content">
                 <!--Tagline-->
                 {block:IfTagline}
@@ -455,58 +456,57 @@
                     </ul>
                 </nav>
             </div>
-
-            
         </div>
+
         <!------------
         SITE FOOTER
         -------------->
         <footer>
             <div class="footer-widget">
-                {block:IfFooterSearchbar}
-                <form action="/search" method="get">
-                    <input type="text" autocomplete="off" name="q" placeholder="{lang:Search keywords}" value="{SearchQuery}"/>
-                    <input class="submit" type="submit" value="{lang:Search}"/>
+            {block:IfFooterSearchbar}
+            <form action="/search" method="get">
+            <input type="text" autocomplete="off" name="q" placeholder="{lang:Search keywords}" value="{SearchQuery}"/>
+            <input class="submit" type="submit" value="{lang:Search}"/>
                 </form>
-                {/block:IfFooterSearchbar}
+            {/block:IfFooterSearchbar}
             </div>
 
             <div class="footer-widget">
-                {block:IfFooterDescription}
-                {block:Description}
-                <p id="description">
-                    {Description}
+            {block:IfFooterDescription}
+            {block:Description}
+            <p id="description">
+            {Description}
                 </p>
-                {/block:Description}
-                {/block:IfFooterDescription}
+            {/block:Description}
+            {/block:IfFooterDescription}
             </div>
 
             <div class="footer-widget">
-                {block:IfFooterText}
-                <p>{text:Footer text}</p>
-                {/block:IfFooterText}
+            {block:IfFooterText}
+            <p>{text:Footer text}</p>
+            {/block:IfFooterText}
             </div>
 
             <div class="footer-widget">
-                <nav id="footer-social-icons">
-                    <ul>
-                        {block:IfFooterSocialIcons}
-                        <!-- build:section social -->
-                        <!-- /build -->
-                        {/block:IfFooterSocialIcons}
+            <nav id="footer-social-icons">
+            <ul>
+            {block:IfFooterSocialIcons}
+            <!-- build:section social -->
+            <!-- /build -->
+            {/block:IfFooterSocialIcons}
                     </ul>
                 </nav>
             </div>
 
             <div class="footer-widget">
-                <p class="theme">
-                    {block:NotEnglish}
-                    {lang:Powered by Tumblr 2} + <a href="http://versetheme.tumblr.com">Verse</a>
-                    {/block:NotEnglish}
+            <p class="theme">
+            {block:NotEnglish}
+            {lang:Powered by Tumblr 2} + <a href="http://versetheme.tumblr.com">Verse</a>
+            {/block:NotEnglish}
 
-                    {block:English}
-                    Powered by <a href="http://versetheme.tumblr.com">Verse</a> for <a href="https://www.tumblr.com/">Tumblr</a>
-                    {/block:English}
+            {block:English}
+            Powered by <a href="http://versetheme.tumblr.com">Verse</a> for <a href="https://www.tumblr.com/">Tumblr</a>
+            {/block:English}
                 </p>
             </div>
         </footer>
@@ -514,23 +514,25 @@
         <!------------
         SCRIPTS
         -------------->
+
         <!-- build:process optional -->
         <script src="<%= static_js_url %>"></script>
         <!-- /build -->
+
         <!-- build:script inline optional theme-->
 
         <!-- /build -->
         {block:IfGoogleAnalyticsID}
         <script>
-         var _gaq = _gaq || [];
-         _gaq.push(['_setAccount', '{text:Google Analytics ID}']);
-         _gaq.push(['_trackPageview']);
+            var _gaq = _gaq || [];
+            _gaq.push(['_setAccount', '{text:Google Analytics ID}']);
+            _gaq.push(['_trackPageview']);
 
-         (function() {
-             var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-             ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-             var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-         })();
+            (function() {
+            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+            })();
         </script>
         {/block:IfGoogleAnalyticsID}
     </body>

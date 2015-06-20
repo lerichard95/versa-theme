@@ -1,41 +1,62 @@
 // HEADER
 // Shown at top of theme
 header {
-  float: left;
-  text-align: center;
-  padding: 3% 15%;
-  display: flex;
-  width: 100%;
-  background-size: cover !important;
-  margin-bottom: 1em;
-  h1 {
-    margin: 0.5em 0;
-    font-weight: bold;
-    font-size: $font-size-xl;
-  }
-  p {
-    margin: 0;
-  }
-  #avatar-shape-circle img {
-    border-radius: 20em;
-  }
-  @include break-point(small) {
-    text-align: left;
-  }
+    text-align: center;
+    padding: 3% 15%;
+
+    // Flexbox code
+    display: flex;
+    justify-content:center;
+    align-items: middle;
+    
+    width: 100%;
+    background-size: cover !important;
+    margin-bottom: 1em;
+    h1 {
+        margin: 0.5em 0;
+        font-weight: bold;
+        font-size: $font-size-m;
+    }
+    p {
+        margin: 0;
+        text-align:left;
+        vertical-align:middle;
+    }
+    #avatar-shape-circle img {
+        border-radius: 20em;
+    }
+    @include break-point(small) {
+        text-align: left;
+
+        // Disable flex when mobile
+        display: block;
+        
+    }
+
+    .blog-about {
+        flex-basis: 30em;
+
+        p { 
+            
+        }
+    }
 }
+
 .has-header-tint {
-  #header-tint {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    z-index: 50;
-    pointer-events: none;
-    opacity: 0.6;
-  }
-  header a, header p, header {
-    position: relative;
-    z-index: 100;
-  }
+    #header-tint {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 50;
+        pointer-events: none;
+        opacity: 0.6;
+    }
+    header a,
+    header p,
+    header {
+        position: relative;
+        z-index: 100;
+    }
 }

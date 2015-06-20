@@ -52,32 +52,48 @@ span.divider {
     bottom: -1 * $spacing;
 }
 // Containers
+
+div#main-flex {
+    display:flex;
+    flex-wrap:nowrap;
+    justify-content:center;
+    width: $wrapper-width;
+}
+ 
+
+// content describes big column
 div#content {
-    float: left;
-    width: 0.9 * $content-width;
-    margin-right: 0.1 * $content-width;
+        
+    width: $content-width;
+    flex-basis:auto;
     @include break-point(small) {
         width: 100%;
     }
 }
-div#wrapper {
-    display: inline-block;
-    float: left;
-    margin: 0 (100 - $wrapper-width) / 2;
-    padding-bottom: 2em;
-    width: $wrapper-width;
-}
+
 div#sidebar {
-    float: left;
-    width: 100 - $content-width;
+
+    padding-top: 2em;
+    padding-left:.1* $wrapper-width;
+    padding-right:.1* $wrapper-width;
+    padding-bottom: 2em;
+
+    width: $content-width * .3;
+    
+    flex-basis: auto;
+    //Width is auto-determined by the content width
+    
     @include break-point(small) {
+        flex-basis: 100%;
         width: 100%;
     }   
 }
 
+/*
 .flex-item {
     display:inline-flex;
     flex-grow: 1;
     flex-shrink:1;
     flex-basis:10%;
 }
+*/
