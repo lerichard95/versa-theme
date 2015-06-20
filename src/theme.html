@@ -64,8 +64,11 @@
         <meta name="text:Footer Text" content=""/>
         <meta name="text:Google Analytics ID" content=''/>
         <meta name="text:Tagline" content=""/>
+
+        <meta name="if:Sidebar Custom Text" content=""/>
         <meta name="text:Sidebar Custom Text" content=""/>
         <meta name="text:Sidebar Custom Text Title" content=""/>
+
         <meta name="text:Username on Facebook" content=''/>
         <meta name="text:Username on Flickr" content=''/>
         <meta name="text:Username on GitHub" content=''/>
@@ -113,7 +116,7 @@
                 {block:ShowAvatar}
                 <div class="avatar-wrapper" id="avatar-shape-{AvatarShape}">
                     <a href="/">
-                        <img src="{PortraitURL-128}" alt="Avatar" class="avatar">
+                        <img src="{PortraitURL-128}" alt="" class="avatar">
                     </a>
                 </div>
                 {/block:ShowAvatar}
@@ -152,12 +155,20 @@
             </div>
 
             <div class="blog-about">
+                <!--Tagline-->
+                {block:IfTagline}
+                <div class="special-page">
+                    <p id="tagline">{text:Tagline}</p>
+                    <span class="divider"></span>
+                </div>
+                {/block:IfTagline}
+                
                 {block:Description}
                 <p>{Description}</p>
                 {/block:Description}
                 
                 {block:SubmissionsEnabled}
-                <li><a href="/submit">{SubmitLabel}</a></li>
+                <p><a href="/submit">{SubmitLabel}</a></p>
                 {/block:SubmissionsEnabled}
 
             </div>
@@ -176,13 +187,7 @@
             -------------->
 
             <div id="content">
-                <!--Tagline-->
-                {block:IfTagline}
-                <div class="special-page">
-                    <p id="tagline">{text:Tagline}</p>
-                    <span class="divider"></span>
-                </div>
-                {/block:IfTagline}
+                
 
                 <!-- Search results -->
                 {block:SearchPage}
