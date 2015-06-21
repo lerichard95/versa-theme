@@ -4,12 +4,13 @@ $font-size-l: $font-size * 2;
 $font-size-m: $font-size * 1.5;
 $font-size-s: $font-size * 0.85;
 $font-size-xs: $font-size * 0.8;
+$font-size-xxs: $font-size * 0.75;
 
 $spacing: 1em;
 
-
-$wrapper-width: 70%;
-$content-width: 35em;
+$wrapper-width: 80%;
+$content-width: 38rem;
+$sidebar-width: 16rem;
 
 @mixin break-point($small) {
   @media screen and (max-width: 900px) {

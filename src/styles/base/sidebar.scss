@@ -1,4 +1,30 @@
 #sidebar {
+
+    .nav-tag {
+        // Reset list styles
+        list-style-type:none;
+        padding-left:0;
+
+        padding-bottom:1em;
+    }
+
+    .nav-tag li {
+        display:list-item;
+    }
+    
+    .widget-title:first-of-type {
+        margin-top:0;
+        
+    }
+
+    .nav-tag-a {
+        font-size:1.2em;
+    }
+
+    .nav-tag-b {
+        font-size:1em;
+    }
+
     .widget-title {
         font-weight: bold;
         display: inline-block;
@@ -32,10 +58,12 @@
     }
     // Search submit button
     input.submit {
-        margin-top: 1em;
+        margin-top: .25em;
+        padding:.5em;
     }
     input {
         width: 100%;
+        font-size:.85em;
     }
     // Margin reset for second element of widget (widget content)
     .sidebar-widget > *:nth-child(2) {

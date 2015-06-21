@@ -60,7 +60,7 @@ header a {
 header a:hover {
   color: {color:Header Text and Links};
 }
-header h1 {
+header h1, header h2 {
   font-family: {font:Blog Title};
 }
 hr {

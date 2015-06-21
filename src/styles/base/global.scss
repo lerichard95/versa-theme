@@ -44,6 +44,7 @@ blockquote {
     margin: $spacing 0;
     padding: 0 0.7em;
 }
+
 span.divider {
     display: block;
     width: 20%;
@@ -57,15 +58,27 @@ div#main-flex {
     display:flex;
     flex-wrap:nowrap;
     justify-content:center;
-    width: $wrapper-width;
+
+    // Fixed width, center it
+    width: 100%;
+    padding-left: (100% - $wrapper-width) / 2;
+    padding-right:(100% - $wrapper-width) / 2;
+    
+    @include break-point(small) {
+        flex-wrap:wrap;
+        width:100%;
+    }
 }
- 
+
 
 // content describes big column
 div#content {
-        
+    
     width: $content-width;
     flex-basis:auto;
+
+    padding-left:3rem;
+
     @include break-point(small) {
         width: 100%;
     }
@@ -74,20 +87,25 @@ div#content {
 div#sidebar {
 
     padding-top: 2em;
-    padding-left:.1* $wrapper-width;
-    padding-right:.1* $wrapper-width;
+    padding-left: 0;
+    padding-right: 0;
     padding-bottom: 2em;
 
-    width: $content-width * .3;
+    width: $sidebar-width;
     
     flex-basis: auto;
     //Width is auto-determined by the content width
+
+    font-size:.9em;
+    
     
     @include break-point(small) {
         flex-basis: 100%;
         width: 100%;
     }   
 }
+
+
 
 /*
 .flex-item {

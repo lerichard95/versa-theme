@@ -1,3 +1,31 @@
+
+
+{block:IfSidebarTagsA}
+<nav class="nav-tag nav-tag-a">
+    <span class="widget-title">{text:Sidebar Tags A Title}</span>
+    <ul>
+        <li><a href="tagged/{text:Sidebar Tags A 1}">{text:Sidebar Tags A 1}</a></li>
+        <li><a href="tagged/{text:Sidebar Tags A 2}">{text:Sidebar Tags A 2}</a></li>
+        <li><a href="tagged/{text:Sidebar Tags A 3}">{text:Sidebar Tags A 3}</a></li>
+        <li><a href="tagged/{text:Sidebar Tags A 4}">{text:Sidebar Tags A 4}</a></li>
+        <li><a href="tagged/{text:Sidebar Tags A 5}">{text:Sidebar Tags A 5}</a></li>
+    </ul>
+</nav>
+{/block:IfSidebarTagsA}
+
+{block:IfSidebarTagsB}
+<nav class="nav-tag nav-tag-b">
+    <span class="widget-title">{text:Sidebar Tags B Title}</span>
+    <ul>
+        <li><a href="tagged/{text:Sidebar Tags B 1}">{text:Sidebar Tags B 1}</a></li>
+        <li><a href="tagged/{text:Sidebar Tags B 2}">{text:Sidebar Tags B 2}</a></li>
+        <li><a href="tagged/{text:Sidebar Tags B 3}">{text:Sidebar Tags B 3}</a></li>
+        <li><a href="tagged/{text:Sidebar Tags B 4}">{text:Sidebar Tags B 4}</a></li>
+        <li><a href="tagged/{text:Sidebar Tags B 5}">{text:Sidebar Tags B 5}</a></li>
+    </ul>
+</nav>
+{/block:IfSidebarTagsB}
+
 {block:IfSidebarPrimaryImageImage}
 <div class="sidebar-widget sidebar-custom-image">
     <a href="{text:Sidebar Primary Image Link}"><img src="{image:Sidebar Primary Image}"/></a>
@@ -64,19 +92,20 @@
 {/block:Likes}
 {/block:IfSidebarLikes}
 
+
+{block:IfSidebarCustomText}
+<div class="sidebar-widget">
+    <span class="widget-title">{text:Sidebar Custom Text Title}</span>
+    <p>{text:Sidebar Custom Text}</p>
+</div>
+{/block:IfSidebarCustomText}
+
+
 {block:IfSidebarSearch}
 <div class="sidebar-widget">
     <form action="/search" method="get">
-        <span class="widget-title">{lang:Search}</span>
         <input type="text" autocomplete="off" name="q" placeholder="{lang:Search keywords}" value="{SearchQuery}"/>
         <input class="submit" type="submit" value="{lang:Search}"/>
     </form>
 </div>
 {/block:IfSidebarSearch}
-
-{block:IfSidebarCustomText}
-<div class="sidebar-widget">
-    <span class="widget-title">{text:Sidebar Custom Text Title}</span>
-   <p>{text:Sidebar Custom Text}</p>
-</div>
-{/block:IfSidebarCustomText}

@@ -50,7 +50,24 @@
         <meta name="image:Header Image" content="http://static.tumblr.com/981y23h/W3Wnnszcp/verse-header.jpg" />
 
         <meta name="image:Sidebar Primary Image" content="" />
-        <meta name="image:Sidebar Secondary Image" content="" />
+<meta name="image:Sidebar Secondary Image" content="" />
+
+<meta name="if:Sidebar Tags A" content="1"/>
+<meta name="text:Sidebar Tags A Title" content="Featured Tags">
+<meta name="text:Sidebar Tags A 1" content=""/>
+<meta name="text:Sidebar Tags A 2" content=""/>
+<meta name="text:Sidebar Tags A 3" content=""/>
+<meta name="text:Sidebar Tags A 4" content=""/>
+<meta name="text:Sidebar Tags A 5" content=""/>
+
+<meta name="if:Sidebar Tags B" content="1"/>
+<meta name="text:Sidebar Tags B Title" content="Featured Tags">
+<meta name="text:Sidebar Tags B 1" content=""/>
+<meta name="text:Sidebar Tags B 2" content=""/>
+<meta name="text:Sidebar Tags B 3" content=""/>
+<meta name="text:Sidebar Tags B 4" content=""/>
+<meta name="text:Sidebar Tags B 5" content=""/>
+
         <meta name="if:Sidebar Description" content="1"/>
         <meta name="if:Sidebar Blog Members" content="1"/>
         <meta name="if:Sidebar People I Follow" content="1"/>
@@ -137,19 +154,23 @@
                         <li><a href="/ask">{AskLabel}</a></li>
                         {/block:AskEnabled}
 
-                        {block:IfHeaderRSSLink}
-                        <li><a href="{RSS}" title="{lang:Subscribe via RSS}">{lang:RSS}</a></li>
-                        {/block:IfHeaderRSSLink}
-
                         {block:IfHeaderArchiveLink}
                         <li><a href="/archive">{lang:Archive}</a></li>
                         {/block:IfHeaderArchiveLink}
 
-                        {block:IfHeaderSocialIcons}
-                        <!-- build:section social -->
+                        {block:IfHeaderRSSLink}
+                        <li><a href="{RSS}" title="{lang:Subscribe via RSS}">{lang:RSS}</a></li>
+                        {/block:IfHeaderRSSLink}
+
+                      </ul>
+                      
+                      {block:IfHeaderSocialIcons}
+                      <ul>
+                      <!-- build:section social -->
                         <!-- /build -->
-                        {/block:IfHeaderSocialIcons}
-                    </ul>
+                      </ul>
+                      {/block:IfHeaderSocialIcons}
+
                 </nav>
 
             </div>
@@ -164,6 +185,7 @@
                 {/block:IfTagline}
                 
                 {block:Description}
+                <h2>About</h2>
                 <p>{Description}</p>
                 {/block:Description}
                 
