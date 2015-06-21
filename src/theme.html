@@ -52,6 +52,8 @@
         <meta name="image:Sidebar Primary Image" content="" />
 <meta name="image:Sidebar Secondary Image" content="" />
 
+<meta name="if:Random Post" content="1"/>
+
 <meta name="if:Sidebar Tags A" content="1"/>
 <meta name="text:Sidebar Tags A Title" content="Featured Tags">
 <meta name="text:Sidebar Tags A 1" content=""/>
@@ -190,7 +192,7 @@
                 {/block:Description}
                 
                 {block:SubmissionsEnabled}
-                <p><a href="/submit">{SubmitLabel}</a></p>
+                <p><a href="/submit" class="label-submit">{SubmitLabel}</a></p>
                 {/block:SubmissionsEnabled}
 
             </div>
@@ -526,13 +528,17 @@
             </div>
 
             <div class="footer-widget">
-            <p class="theme">
+
+
+              <p class="theme">
             {block:NotEnglish}
-            {lang:Powered by Tumblr 2} + <a href="http://versetheme.tumblr.com">Verse</a>
+            {lang:Powered by Tumblr 2} + <a href="https://github.com/lerichard95/versa-theme">Versa</a>
             {/block:NotEnglish}
 
             {block:English}
-            Powered by <a href="http://versetheme.tumblr.com">Verse</a> for <a href="https://www.tumblr.com/">Tumblr</a>
+<a href="https://github.com/lerichard95/versa-theme">Versa theme</a>
+              adapted by <a href="https://twitter.com/rltherichman">@rltherichman</a> from <a
+              href="https://verse-theme.tumblr.com">Verse</a>
             {/block:English}
                 </p>
             </div>

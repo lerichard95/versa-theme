@@ -57,23 +57,7 @@ module.exports = function(grunt) {
                       '<%= paths.build %>/sass-output/**/*.css' ],
                 dest: '<%= paths.build %>/css/dist.css'
             }
-        },
-
-        // Autoprefixer
-        postcss: {
-            options: {
-                map: true,
-                processors: [
-                    require('autoprefixer-core')({
-                        browsers: ['last 2 versions']
-                    })
-                ]
-            },
-            dist: {
-                src: '<%= paths.build %>/css/*.css'
-            }
-        },
-        
+        },        
         
         // Minify CSS
         cssmin: {
@@ -139,7 +123,6 @@ module.exports = function(grunt) {
     });
 
     // Load dependencies
-    grunt.loadNpmTasks('grunt-postcss');
     grunt.loadNpmTasks('grunt-contrib-concat');
     grunt.loadNpmTasks('grunt-contrib-uglify');
     grunt.loadNpmTasks('grunt-html-build');
@@ -154,7 +137,7 @@ module.exports = function(grunt) {
     grunt.registerTask('template', ['htmlbuild:inline']);
 
     // Theme build tasks
-    grunt.registerTask('inline', ['concat', 'postcss','uglify', 'sass', 'concat_css:inline', 'htmlbuild:inline', 'clean']);
-    grunt.registerTask('inline-no-js', ['sass', 'concat_css:inline', 'postcss', 'htmlbuild:inline', 'clean']);
-    grunt.registerTask('dist', ['concat', 'uglify', 'sass', 'concat_css:dist', 'postcss', 'cssmin', 'htmlbuild:dist', 'clean']);
+    grunt.registerTask('inline', ['concat', 'uglify', 'sass', 'concat_css:inline', 'htmlbuild:inline', 'clean']);
+    grunt.registerTask('inline-no-js', ['sass', 'concat_css:inline', 'htmlbuild:inline', 'clean']);
+    grunt.registerTask('dist', ['concat', 'uglify', 'sass', 'concat_css:dist', 'cssmin', 'htmlbuild:dist', 'clean']);
 }

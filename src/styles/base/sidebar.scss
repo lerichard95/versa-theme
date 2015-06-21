@@ -9,7 +9,12 @@
     }
 
     .nav-tag li {
-        display:list-item;
+        display:block;
+        width:auto;
+    }
+
+    .nav-tag a {
+        width:auto;
     }
     
     .widget-title:first-of-type {
@@ -53,17 +58,25 @@
         display: inline-block;
         width: 100%;
 
-
         margin-bottom: 1.5em;
     }
-    // Search submit button
-    input.submit {
-        margin-top: .25em;
-        padding:.5em;
+
+
+    .random {
+        margin-bottom: 1.5em;
+        font-weight:bold;
     }
+    // Search submit button
+
+    input.submit {
+        margin-top: .5em;
+        line-height:1.75em;
+    }
+    //search field
     input {
         width: 100%;
         font-size:.85em;
+        padding: .75em 1em;
     }
     // Margin reset for second element of widget (widget content)
     .sidebar-widget > *:nth-child(2) {

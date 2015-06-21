@@ -4,8 +4,17 @@ header {
     text-align: center;
 
     // Flexbox code
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-pack:center;
+    -webkit-justify-content:center;
+    -ms-flex-pack:center;
     justify-content:center;
+    -webkit-box-align: middle;
+    -webkit-align-items: middle;
+    -ms-flex-align: middle;
     align-items: middle;
     
     width: 100%;
@@ -34,25 +43,48 @@ header {
     }
     
     @include break-point(small) {
-        text-align: left;
+        text-align: center;
         // Disable flex when mobile
-        display: block;
+        -webkit-box-pack:center;
+        -webkit-justify-content:center;
+        -ms-flex-pack:center;
+        justify-content:center;
+        -webkit-box-align: middle;
+        -webkit-align-items: middle;
+        -ms-flex-align: middle;
+        align-items: middle;
+
+        -webkit-flex-wrap:wrap;-ms-flex-wrap:wrap;flex-wrap:wrap;
+        
     }
 
     .blog-header, .blog-about {
         z-index:100;
     }
+
+    ul {
+        margin-bottom:1em;
+    }
+    
+    ul:last-of-type{
+        margin-bottom:0;
+    }
     
     .blog-header {
         width: $sidebar-width;
-        flex-basis:auto;
+        -webkit-flex-basis:auto;-ms-flex-preferred-size:auto;flex-basis:auto;
         
+    }
+
+    .blog-about>* {
+        max-width:30em;
     }
     
     .blog-about {
-
         width: $content-width;
-        flex-basis: auto;
+
+        -webkit-flex-basis: auto;-ms-flex-preferred-size: auto;flex-basis: auto;
+
         padding-left:3rem;
         h2 {
 
@@ -61,11 +93,30 @@ header {
 
         //Paragraph spacing
         p {
-            font-size:.9em;
-            line-height:1.15em;
+            font-size:.85em;
+            line-height:1.25em;
             margin-bottom:.5em;
+            
         }
+
+        a {
+            font-weight:bold;
+            :hover {
+                border-bottom: 1px solid;
+            }
+        }
+
+        @include break-point(small) {
+            width:auto;
+            padding-left:0;
+        }
+        
     }
+}
+
+// submit label
+.label-submit {
+    
 }
 
 .has-header-tint {

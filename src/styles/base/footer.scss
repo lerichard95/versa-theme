@@ -1,4 +1,4 @@
-x// FOOTER
+// FOOTER
 // Shown at bottom of theme
 footer {
     font-size: $font-size-xxs;
@@ -7,11 +7,12 @@ footer {
     display: block;
 
     text-align: center;
-    padding: 3em;
+    padding: 3em 3em 2em 3em;
     border-top: 1px solid rgba(0, 0, 0, 0.03);
     float: left;
 
     .theme {
+        font-size:.75em;
         font-weight: bold;
         letter-spacing: 0.1em;
         text-transform: uppercase;
@@ -24,6 +25,7 @@ footer {
     }
 
     #footer-social-icons {
+        font-size: $font-size-s;
         margin: 1em 0;
     }
 }

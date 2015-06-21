@@ -55,9 +55,17 @@ span.divider {
 // Containers
 
 div#main-flex {
+    display:-webkit-box;
+    display:-webkit-flex;
+    display:-ms-flexbox;
     display:flex;
-    flex-wrap:nowrap;
-    justify-content:center;
+    -webkit-flex-wrap:nowrap;
+    -ms-flex-wrap:nowrap;
+            flex-wrap:nowrap;
+    -webkit-box-pack:center;
+    -webkit-justify-content:center;
+    -ms-flex-pack:center;
+            justify-content:center;
 
     // Fixed width, center it
     width: 100%;
@@ -65,7 +73,7 @@ div#main-flex {
     padding-right:(100% - $wrapper-width) / 2;
     
     @include break-point(small) {
-        flex-wrap:wrap;
+        -webkit-flex-wrap:wrap;-ms-flex-wrap:wrap;flex-wrap:wrap;
         width:100%;
     }
 }
@@ -75,12 +83,13 @@ div#main-flex {
 div#content {
     
     width: $content-width;
-    flex-basis:auto;
+    -webkit-flex-basis:auto;-ms-flex-preferred-size:auto;flex-basis:auto;
 
     padding-left:3rem;
 
     @include break-point(small) {
         width: 100%;
+        padding-left:0;
     }
 }
 
@@ -93,14 +102,14 @@ div#sidebar {
 
     width: $sidebar-width;
     
-    flex-basis: auto;
+    -webkit-flex-basis: auto;-ms-flex-preferred-size: auto;flex-basis: auto;
     //Width is auto-determined by the content width
 
     font-size:.9em;
     
     
     @include break-point(small) {
-        flex-basis: 100%;
+        -webkit-flex-basis: 100%;-ms-flex-preferred-size: 100%;flex-basis: 100%;
         width: 100%;
     }   
 }

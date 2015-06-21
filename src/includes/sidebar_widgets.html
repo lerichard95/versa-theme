@@ -1,7 +1,7 @@
 
-
 {block:IfSidebarTagsA}
-<nav class="nav-tag nav-tag-a">
+
+<nav class="sidebar-widget nav-tag nav-tag-a">
     <span class="widget-title">{text:Sidebar Tags A Title}</span>
     <ul>
         <li><a href="tagged/{text:Sidebar Tags A 1}">{text:Sidebar Tags A 1}</a></li>
@@ -14,7 +14,7 @@
 {/block:IfSidebarTagsA}
 
 {block:IfSidebarTagsB}
-<nav class="nav-tag nav-tag-b">
+<nav class="sidebar-widget nav-tag nav-tag-b">
     <span class="widget-title">{text:Sidebar Tags B Title}</span>
     <ul>
         <li><a href="tagged/{text:Sidebar Tags B 1}">{text:Sidebar Tags B 1}</a></li>
@@ -92,7 +92,6 @@
 {/block:Likes}
 {/block:IfSidebarLikes}
 
-
 {block:IfSidebarCustomText}
 <div class="sidebar-widget">
     <span class="widget-title">{text:Sidebar Custom Text Title}</span>
@@ -100,6 +99,13 @@
 </div>
 {/block:IfSidebarCustomText}
 
+{block:IfRandomPost}
+<div class="sidebar-widget">
+    <a href="/random" title="Random" class="random">
+        <span class="fa fa-fw fa-random"></span> Random
+    </a>
+</div>
+{/block:IfRandomPost}
 
 {block:IfSidebarSearch}
 <div class="sidebar-widget">
