@@ -1,6 +1,7 @@
 module.exports = function(grunt) {
     grunt.initConfig({
-
+        
+        
         paths: {
             bower: 'bower_components',
             build: 'build',
@@ -10,6 +11,8 @@ module.exports = function(grunt) {
             styles: 'src/styles'
         },
         pkg: grunt.file.readJSON('package.json'),
+
+
         // Combine JavaScript plugins
         concat: {
             dist: {
@@ -129,8 +132,8 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-clean');
     grunt.loadNpmTasks('grunt-concat-css');
     grunt.loadNpmTasks('grunt-contrib-sass');
-    grunt.loadNpmTasks('grunt-contrib-cssmin');
-
+    grunt.loadNpmTasks('grunt-contrib-cssmin');    
+    
     // Prepare and test plugins if required
     grunt.registerTask('plugins', ['concat', 'uglify']);
     grunt.registerTask('styles', ['sass', 'concat_css']);

@@ -20,7 +20,7 @@ article {
 // Avoid causing extra margin at top of posts
 .post-content > *:first-child,
 .type-answer .question .asker {
-  margin-top: 0;
+    margin-top: 0;
 }
 .caption {
   margin-top: $spacing;
@@ -70,6 +70,16 @@ article {
     font-style: italic;
   }
 }
+
+.question {
+    
+    background: #e4e4e4;
+    padding:1.5em;
+    margin-bottom:.5em;
+    color:#666;
+    border-radius: 15px;
+}
+
 // Disqus comments
 .comments {
     margin-bottom: $spacing/2;

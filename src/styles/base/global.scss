@@ -31,6 +31,24 @@ figure {
 a {
     text-decoration: none;
 }
+
+// super cool CSS3 transition animations
+@mixin transition-hover {
+    transition-property: border, background-color, color;
+    transition-duration: .1s;
+    transition-timing-function: ease;
+}
+
+a {
+    @include transition-hover;
+}
+
+a:hover {
+    @include transition-hover;
+}
+
+
+
 // reset list items
 nav ul,
 .tags ul,

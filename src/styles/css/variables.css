@@ -57,9 +57,13 @@ header,
 header a {
   color: {color:Header Text and Links};
 }
+
+/*
 header a:hover {
   color: {color:Header Text and Links};
 }
+*/
+
 header h1, header h2 {
   font-family: {font:Blog Title};
 }
