@@ -9,11 +9,11 @@ $font-size-xxs: $font-size * 0.75;
 $spacing: 1em;
 
 $wrapper-width: 80%;
-$content-width: 38rem;
-$sidebar-width: 16rem;
+$content-width: 45rem;
+$sidebar-width: 12rem;
 
 @mixin break-point($small) {
-  @media screen and (max-width: 900px) {
-      @content ;
-  }
+    @media screen and (max-width: 900px) {
+        @content ;
+    }
 }

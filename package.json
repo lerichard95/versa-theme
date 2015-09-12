@@ -1,8 +1,8 @@
 {
   "name": "verse",
   "version": "2.0.0",
-  "staticCSS": "http://static.tumblr.com/yvrfz4r/3ipnqixkp/dist.css",
-  "staticJS": "http://static.tumblr.com/yvrfz4r/Xbznqixkb/verse.min.js",
+  "staticCSS": "http://static.tumblr.com/yvrfz4r/4TEnuky6t/dist.min.css",
+  "staticJS": "http://static.tumblr.com/yvrfz4r/hmcnuky1x/verse.min.js",
   "devDependencies": {
     "autoprefixer-core": "^5.2.0",
     "grunt": "^0.4.5",

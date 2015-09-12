@@ -79,11 +79,11 @@ div#main-flex {
     display:flex;
     -webkit-flex-wrap:nowrap;
     -ms-flex-wrap:nowrap;
-            flex-wrap:nowrap;
+    flex-wrap:nowrap;
     -webkit-box-pack:center;
     -webkit-justify-content:center;
     -ms-flex-pack:center;
-            justify-content:center;
+    justify-content:center;
 
     // Fixed width, center it
     width: 100%;

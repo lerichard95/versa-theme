@@ -10,7 +10,6 @@ header {
         text-decoration:underline dotted;
     }
 
-    text-align: center;
 
     // Flexbox code
     display: -webkit-box;
@@ -35,6 +34,12 @@ header {
     background-size: cover !important;
     margin-bottom: 1em;
 
+    
+    font-size:.85em;
+    line-height:1.6em;
+    margin-bottom:.5em;
+    
+    
     h1 {
         margin: 0.5em 0;
         font-weight: bold;
@@ -80,13 +85,16 @@ header {
     }
     
     .blog-header {
+        
+        text-align: center;
         width: $sidebar-width;
         -webkit-flex-basis:auto;-ms-flex-preferred-size:auto;flex-basis:auto;
         
     }
 
     .blog-about>* {
-        max-width:30em;
+        // Used to control CPL
+        // max-width:30em;
     }
     
     .blog-about {
@@ -100,13 +108,8 @@ header {
             text-align:left;
         }
 
-        //Paragraph spacing
-        p {
-            font-size:.85em;
-            line-height:1.6em;
-            margin-bottom:.5em;
-            
-        }
+        
+        
 
 
 

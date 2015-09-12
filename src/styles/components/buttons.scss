@@ -1,19 +1,20 @@
 // BUTTONS
 .button {
-  padding: $spacing/2 $spacing;
-  display: inline-block;
-  border-radius: 30em;
-  margin: $spacing 0;
-  i {
-    padding: 0 0.2em;
-  }
-  &:hover {
-    color: white;
-  }
-  @include break-point(small) {
-    width: $spacing $spacing * 1.5;
-  }
+    padding: $spacing/2 $spacing;
+    
+    display: inline-block;
+    border-radius: 30em;
+    margin: $spacing 0;
+    i {
+        padding: 0 0.2em;
+    }
+    &:hover {
+        color: white;
+    }
+    @include break-point(small) {
+        width: $spacing $spacing * 1.5;
+    }
 }
 .button.read-more {
-  margin-bottom: 0;
+    margin-bottom: 0;
 }
